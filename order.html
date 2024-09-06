@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page - Foodie World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-section">
+            <img src="logo.png" alt="Logo" class="logo">
+            <span class="title">Foodie World</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./indian.html">Food</a></li>
+            <li><a href="drinks.html">Drinks</a></li>
+            <li><a href="snacks.html">Snacks</a></li>
+            <li><a href="fruits.html">Fruits</a></li>
+            <li><input type="text" placeholder="Search" class="search-bar"></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="login.html" class="button animated-button">Login</a>
+            <a href="signup.html" class="button animated-button">Signup</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="order-container">
+        <h2>Your Order</h2>
+        <div class="order-summary">
+            <!-- Displaying selected item -->
+            <div class="order-item">
+                <img src="food-image.jpg" alt="Food Item" class="order-item-img">
+                <h3 class="item-name">Food Name</h3>
+                <p class="item-price">Price: $<span id="item-price">10</span></p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1" class="quantity-input">
+            </div>
+        </div>
+
+        <!-- Total Calculation -->
+        <div class="total">
+            <p>Total Amount: $<span id="total-price">10</span></p>
+        </div>
+
+        <!-- Payment Options -->
+        <h3>Select Payment Method</h3>
+        <div class="payment-options">
+            <label>
+                <input type="radio" name="payment" value="PhonePe"> 
+                <img src="phonepe.png" alt="PhonePe" class="payment-logo">
+            </label>
+            <label>
+                <input type="radio" name="payment" value="GooglePay"> 
+                <img src="googlepay.png" alt="Google Pay" class="payment-logo">
+            </label>
+            <label>
+                <input type="radio" name="payment" value="Paytm"> 
+                <img src="paytm.png" alt="Paytm" class="payment-logo">
+            </label>
+        </div>
+
+        <!-- Address Input -->
+        <div class="address-section">
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" rows="3" placeholder="Enter your delivery address"></textarea>
+        </div>
+
+        <!-- Submit Order Button -->
+        <button class="submit-order-btn" onclick="alert('orderd succfully')">Place Order</button>
+    </div>
+
+    <script src="order.js"></script>
+</body>
+</html>
